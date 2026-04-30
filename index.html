@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
         :root {
             --primary: #005a9c; /* Classic Edge Blue */
             --bg: #f8fafc;
@@ -108,12 +110,11 @@
 </footer>
 
 <script>
-    // Purely cosmetic script for the UI
     document.getElementById('year').innerText = new Date().getFullYear();
     document.getElementById('current-domain').innerText = window.location.hostname;
     
-    // Simple logic to label the provider for the demo
     const host = window.location.hostname;
+    // Labels Cloudflare if the domain is gtgplayground.com, otherwise Akamai
     document.getElementById('edge-provider').innerText = host.includes('gtg') ? 'Cloudflare' : 'Akamai';
 </script>
 
